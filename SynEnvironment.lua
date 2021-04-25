@@ -8,6 +8,7 @@ local env = getgenv(); do
     };
     env.Color = {};
     env.Requests = {};
+    env.Hook = {};
 end
 local constants = env.constants
 
@@ -20,6 +21,10 @@ end
 
 function env.Math.round(num, decimal)
     return constants.floor(num + (num < 0 and -0.5 or 0.5))
+end
+
+function env.Math.GetDistance(p1, p2)
+    return (p1 - p2).magnitude
 end
 
 function Requests.new(url, headers)
