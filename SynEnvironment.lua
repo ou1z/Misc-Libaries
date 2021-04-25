@@ -43,8 +43,6 @@ function Requests.new(url, headers)
     
     function self:Close()
         assert(not Closed, 'Request is closed.')
-        Request = {}
-        self = {}
         Closed = true
     end
     
